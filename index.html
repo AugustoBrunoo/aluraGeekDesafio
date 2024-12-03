@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AluraGeek</title>
+    <link rel="stylesheet" href="./css/style1.css">
+</head>
+<body class="container">
+    <header class="container__cabecalho">
+        <div class="container__cabecalho__imagem">
+            <img src="./img/coracaoCabecalho.svg" alt="Logo AluraGeek">
+        </div>
+        <div class="container__cabecalho__titulo">
+            <h1>AluraGeek</h1>
+        </div>
+    </header>
+
+    <main class="container__menu">
+        <!-- Responsavel pelo quadrado de produtos -->
+        <div class="container__produtos">
+
+            <h2 class="container__menu__texto">Meus produtos:</h2>
+            <div class="container__menu__produtos">
+
+                <!-- Lista de produtos com nome, preço e imagem e botão de remoção de produto -->
+                <!-- Card 1  -->
+                <div data-product class="card__container">
+                    <div class="img-container">
+                        <img src="https://candide.vtexassets.com/arquivos/ids/1386254/11667_1-.jpg?v=638599692244300000" alt="Imagem produto">
+                    </div>
+
+                    <div class="card__container__info">
+                        <p>Boneco Deadpool</p>
+                        <div class="card__container__info--value">
+                            <p>R$ 25</p>
+                        </div>
+                    </div>
+
+                    <button class="delete-button" data-id="${id}">
+                        <img src="./img/deleteBtn.svg" alt="Eliminar"> 
+                        <h2>Remover</h2>
+                    </button>
+                </div>
+               
+
+            </div>
+        </div>
+
+        <!-- Responsavel pelo quadrado de adição de produtos -->
+
+        <div class="container__menu__adicaoDeProdutos">
+            <div class="container__menu__adicaoDeProdutos--textoPrincipal">
+                <h2 class="textoAdicaoDeProdutos">Adicionar produto:</h2>
+            </div>
+            <!-- Formulário de adição de produtos com campos de input para nome, preço e imagem com botoes de submit e reset -->
+            <form action="adicionaProduto" method="post" data-formulario>
+                <div class="container__menu__inputs">
+                    <input type="text" name="nome" id="nome" placeholder="Nome..." required>
+                    <input type="number" name="preco" id="preco" placeholder="Preço..." required>
+                    <input type="text" name="imagem" id="imagem" placeholder="Imagem..." required>
+                </div>
+
+                <div class="container__menu__botoes">
+                    <button type="submit">Guardar</button>
+                    <button type="reset">Limpar</button>
+                </div>
+        </div>
+    </main>
+    <footer class="rodape">
+        
+        <div class="rodape__logo">
+            <img src="./img/coracaoCabecalho.svg" alt="Logo AluraGeek">
+                <h3 class="rodape__logo--texto-h3">AluraGeek</h3>
+        </div>
+        <div class="rodape__logo__textos">
+            <p class="rodape__logo__textos--dev">Desenvolvido por Augusto Bruno</p>
+        </div>
+
+    </footer>
+    <!-- Deve colocar module, pois estamos trabalhando com export e import no JS -->
+    <script type="module" src="./js/controllers/script.js"></script>
+</body>
+</html>

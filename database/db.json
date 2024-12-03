@@ -1,0 +1,34 @@
+{
+  "products": [
+    {
+      "name": "Boneco Batman",
+      "price": 50,
+      "image": "https://imageswscdn.wslojas.com.br/files/10551/MED_produto-boneco-batman-the-animated-series-dc-collectibles-6033.jpg",
+      "id": 1
+    },
+    {
+      "name": "Lego Superman",
+      "price": 70,
+      "image": "https://down-br.img.susercontent.com/file/c377386fe3343b4560120c930ac7a06c",
+      "id": 2
+    },
+    {
+      "name": "Boneco Super Mario",
+      "price": 76,
+      "image": "https://cdn.awsli.com.br/600x450/2437/2437567/produto/163608555/captura-de-tela-2023-01-13-161602-a29ed8f578.jpg",
+      "id": 3
+    },
+    {
+      "name": "Playstation 2",
+      "price": 450,
+      "image": "https://i5.walmartimages.com/seo/Pre-Owned-Sony-PlayStation-2-PS2-Game-Console-System_5ad4bfb3-05d4-49b9-a346-5cad42478801.b5ab283e8878458d2cd45899b74b0442.jpeg",
+      "id": 4
+    },
+    {
+      "name": "Boneco Carl Johnson - GTA San Andreas",
+      "price": 76,
+      "image": "https://down-br.img.susercontent.com/file/br-11134207-7qukw-lfveph7ws7ra62",
+      "id": 5
+    }
+  ]
+}

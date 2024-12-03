@@ -1,0 +1,356 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+    background-color: silver;
+    font-family: "Press Start 2P", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.container__cabecalho{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #5300C8;
+    padding: 10px;
+}
+
+.container__cabecalho__imagem img{
+    max-height: 50px;
+    object-fit: contain;
+    background-color: #5300C8;
+}
+
+.container__cabecalho__titulo h1{
+    font-size: 30px;
+    background-color: #5300C8;
+}
+
+.container__menu{
+    padding: 5% 10%;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.container__menu__texto{
+    text-align: center;
+    margin-bottom: 30px;
+    background: none;
+}
+
+.container__menu__produtos{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Organiza os cards em 2 colunas */
+    gap: 1rem;  /* Espaço entre os cards */
+    padding: 1rem; /* Espaço interno do container */
+
+    background-color: white;
+    
+    height: 700px;
+    width: 700px;
+
+    border-radius: 10%;
+    
+    flex-wrap: wrap;
+    overflow: scroll;
+    
+}
+
+.card__container{
+    display: flex;
+    flex-direction: column;  /* Isso organiza as imagens e informações em coluna */
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;  /* Ajuste para ocupar 100% da largura disponível */
+    max-width: 300px;  /* Tamanho máximo para o card */
+    margin: 10px;  /* Espaço entre os cards */
+    
+    border-radius: 10%;
+    padding: 15px;
+    background-color: #f4f4f4;  /* Cor de fundo do card */
+}
+
+.img-container{
+    background-color: whitesmoke;
+}
+
+.img-container img{
+    width: 150px;
+    height: 150px;
+    background-color: whitesmoke;
+    border: 2px solid #5300C8;
+    border-radius: 10%;
+}
+
+.card__container__info{
+    display: flex;
+    flex-direction: column;
+    background-color: whitesmoke;
+    gap: 10px;
+    align-items: center;
+}
+
+.card__container__info p{
+    margin-top: 10px;
+    background-color: whitesmoke;
+}
+
+.card__container__info--value{
+    background-color: whitesmoke;
+}
+
+.delete-button{
+    margin-top: 20px;
+    width: 200px;
+
+    background-color: whitesmoke;
+    border: 1px solid #5300C8;
+    border-radius: 10px;
+    padding: 3px;
+
+    display: flex;
+    align-items: center;
+    font-size: 8px;
+    justify-content: center;
+    gap: 5px;
+}
+
+
+.delete-button img, h2{
+    background-color: whitesmoke;
+    
+}
+
+.delete-button:hover{
+    cursor: pointer;
+}
+
+.delete-button img, h2:hover{
+    background-color: none;
+}
+
+.textoAdicaoDeProdutos{
+    background: none;
+}
+
+.container__menu__adicaoDeProdutos{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.container__menu__inputs{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 15px;
+}
+
+.container__menu__inputs input{
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid #5300C8;
+    background: white;
+    width: 400px;
+    justify-content: center;
+}
+
+/* .inputs input:focus{
+    border: 2px solid #5300C8;
+} */
+
+.container__menu__botoes{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.container__menu__botoes button{
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid #5300C8;
+    background-color: white;
+    color: black;
+    cursor: pointer;
+}
+
+.container__menu__botoes button:hover{
+    background-color: #5300C8;
+    color: white;
+    transition: 0.5s;
+}
+
+.rodape{
+    width: 100%;
+    background-color: #5300C8;
+    padding: 2% 0%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.rodape__logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background-color: #5300C8;
+}
+
+.rodape__logo img{
+    background-color: #5300C8;
+    max-height: 50px;
+}
+
+.rodape__logo h3{
+    font-size: 20px;
+    background-color: #5300C8;
+}   
+
+.rodape__logo__textos p{
+    background-color: #5300C8;
+    color: white;
+}
+
+/* Telas até 768px */
+
+@media (max-width: 768px){
+    .container__cabecalho{
+        width: auto;
+    }
+
+    .container__cabecalho__imagem img{
+        max-height: 30px;
+    }
+
+    .container__cabecalho__titulo h1{
+        font-size: 20px;
+    }
+
+    .container__menu{
+        padding: 2% 5%;
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 30px;
+    }
+
+    .container__menu__texto{
+        font-size: 17px;
+    }
+
+    
+    .container__menu__produtos{
+        grid-template-columns: repeat(1, 1fr);
+        border-radius: 10px;
+        width: 300px;
+        align-items: center;
+        justify-self: center; /*alinha o container no centro */
+        padding: 2px;
+    }
+
+
+    .img-container img{
+        width: 120px;
+        height: 120px;
+    }
+
+    .card__container{
+        border: 1px solid #5300C8;
+        width: 270px;
+    }
+
+    
+    .card__container__info p{
+        font-size: 12px;
+    }
+
+    .card__container__info--value p{
+        font-size: 14px;
+    }
+
+    .container__menu__adicaoDeProdutos{
+        margin-top: 10%;
+    }
+
+    .textoAdicaoDeProdutos{
+        font-size: 12px;
+    }
+
+    .container__menu__inputs input{
+        width: auto;
+        font-size: 12px;
+    }
+
+    .container__menu__botoes button{
+        font-size: 10px;
+    }
+
+    .rodape{
+        margin-top: 10%;
+        width: auto;
+        height: 100px;
+    }
+
+    .rodape__logo img{
+        max-height: 30px;
+    }
+
+    .rodape__logo h3{
+        font-size: 15px;
+    }
+
+    .rodape__logo__textos p{
+        font-size: 10px;
+    }
+
+}
+
+@media (max-width: 1430px){
+    .container__menu{
+        padding: 2% 5%;
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 30px;
+    }
+
+    .container__produtos{
+        margin-top: 20px;
+    }
+
+    .container__menu__produtos{
+        align-items: center;
+        justify-self: center; /*alinha o container no centro */
+        padding: 2px;
+    }
+}
+
+@media (min-width: 1675px){
+    .rodape{
+        height: 200px;
+    }
+}
+
+@media (min-width: 2560px){
+    .container__menu{
+        padding: 10% 20%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .container__menu__produtos{
+        grid-template-columns: repeat(3, 1fr);
+        width: auto;
+        border-radius: 10px;
+        border: 3px solid #5300C8;
+    }
+    
+}
